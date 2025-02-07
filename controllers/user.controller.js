@@ -59,9 +59,9 @@ const loginUser  = async (req, res) => {
       res.status(200).json({ message: "Login successful", token });
     });
   } catch (error) {
-    res.status(500).json({ message: "Something went wrong, try again", error });
+    res.status(500).json({ message: "Something went wrong, try again", "Error":error });
   }
 };
 
-// Correctly export the functions
+
 module.exports =  registerUser , loginUser  ;
