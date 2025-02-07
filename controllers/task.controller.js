@@ -16,7 +16,7 @@ const createTask = async (req, res) => {
 
 const getTasks = async (req, res) => {
     try {
-        const tasks = await TaskModel.find({ userId: req.user.id });
+        const tasks = await TaskModel.find();
         res.json(tasks);
     } catch (error) {
         res.status(500).json({ message: "Error fetching tasks", error });
