@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   try {
     res.status(200).json({ message: "Welcome to the Kazamevtech backend" });
   } catch (error) {
-    res.status(500).json({ message: "Something went wrong" });
+    res.status(500).json({ message: "Something went wrong,try again" });
   }
 
 })
